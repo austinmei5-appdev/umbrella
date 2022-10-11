@@ -14,9 +14,9 @@ puts "Checking the weather at #{user_location}...."
 
 # Get the lat/lng of location from Google Maps API
 
-gmaps_key = ENV.fetch("GMAPS_KEY")
+gmaps_token = ENV.fetch("GMAPS_TOKEN")
 
-gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{user_location}&key=#{gmaps_key}"
+gmaps_url = "https://maps.googleapis.com/maps/api/geocode/json?address=#{user_location}&key=#{gmaps_token}"
 
 # p "Getting coordinates from:"
 # p gmaps_url
@@ -41,9 +41,9 @@ puts "Your coordinates are #{latitude}, #{longitude}."
 
 # Get the weather from Dark Sky API
 
-dark_sky_key = ENV.fetch("DARK_SKY_KEY")
+dark_sky_token = ENV.fetch("DARK_SKY_TOKEN")
 
-dark_sky_url = "https://api.darksky.net/forecast/#{dark_sky_key}/#{latitude},#{longitude}"
+dark_sky_url = "https://api.darksky.net/forecast/#{dark_sky_token}/#{latitude},#{longitude}"
 
 # p "Getting weather from:"
 # p dark_sky_url
